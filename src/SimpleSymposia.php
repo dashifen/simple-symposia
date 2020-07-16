@@ -4,7 +4,7 @@ namespace Dashifen\SimpleSymposia;
 
 use Dashifen\WPHandler\Handlers\HandlerException;
 use Dashifen\WPHandler\Handlers\Plugins\AbstractPluginHandler;
-use Dashifen\SimpleSymposia\Agents\ContentStructureRegistrationAgent;
+use Dashifen\SimpleSymposia\Agents\PostTypeAgent;
 
 class SimpleSymposia extends AbstractPluginHandler
 {
@@ -33,7 +33,7 @@ class SimpleSymposia extends AbstractPluginHandler
   protected function activate(): void
   {
     $agents = $this->getAgentCollection();
-    $contentStructureRegistrationAgent = $agents[ContentStructureRegistrationAgent::class];
+    $contentStructureRegistrationAgent = $agents[PostTypeAgent::class];
     $contentStructureRegistrationAgent->registerContentStructures();
     flush_rewrite_rules();
   }

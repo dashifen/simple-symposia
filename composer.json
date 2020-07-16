@@ -17,7 +17,7 @@
     }
   },
   "require": {
-    "dashifen/wp-handler": "^9.6"
+    "dashifen/wp-handler": "^9.7"
   },
   "config": {
     "sort-packages": true,
