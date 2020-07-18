@@ -1,0 +1,19 @@
+#col-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+#col-left,
+#col-right {
+    float: none;
+    width: 100%;
+}
+
+.fixed .column-posts {
+    width: 100px;
+}
+
+.term-description-wrap {
+    display: none;
+}

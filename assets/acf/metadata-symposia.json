@@ -35,6 +35,25 @@
             "display_format": "F j, Y",
             "return_format": "U",
             "first_day": 0
+        },
+        {
+            "key": "field_5f12f8fc8d316",
+            "label": "Description",
+            "name": "simpsymp-symposia-description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 1,
+            "delay": 0
         }
     ],
     "location": [

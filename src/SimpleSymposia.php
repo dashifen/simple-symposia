@@ -22,12 +22,13 @@ class SimpleSymposia extends AbstractPluginHandler
   {
     if (!$this->isInitialized()) {
       $this->registerActivationHook('activate');
+      $this->addAction('init', 'activate');
       
       // we initialize agents at priority level 5 so that the agents themselves
       // can use the default of 10 without it being already in progress.
       
       $this->addAction('init', 'initializeAgents', 5);
-      $this->addAction('init', 'activate');
+      $this->addAction('admin_enqueue_scripts', 'addAssets');
     }
   }
   
@@ -44,6 +45,43 @@ class SimpleSymposia extends AbstractPluginHandler
     $agents = $this->getAgentCollection();
     $contentStructureRegistrationAgent = $agents[PostTypeAgent::class];
     $contentStructureRegistrationAgent->register();
-    flush_rewrite_rules();
+    
+    // this method is called both on activation and during the init action.
+    // only during activation do we want to flush the rewrite rules, so we can
+    // see if this is currently init to determine if we should do so or not.
+    
+    if (current_action() !== 'init') {
+      flush_rewrite_rules();
+    }
+  }
+  
+  /**
+   * addAssets
+   *
+   * Adds CSS and JS assets necessary for this plugin.
+   *
+   * @return void
+   */
+  protected function addAssets(): void
+  {
+    if ($this->isSymposiumEditor()) {
+      $this->enqueue('assets/css/symposium-styles.css');
+    }
+  }
+  
+  /**
+   * isSymposiumEditor
+   *
+   * Returns true if we're on the edit-tags.php page and we're specifically
+   * editing our symposium taxonomy.  This method is public so that the
+   * PostTypeAgent can access it, too.
+   *
+   * @return bool
+   */
+  public function isSymposiumEditor(): bool
+  {
+    $screen = get_current_screen();
+    $symposium = self::PREFIX . PostTypeAgent::SYMPOSIUM;
+    return $screen->base === 'edit-tags' && $screen->taxonomy === $symposium;
   }
 }
