@@ -8,6 +8,8 @@ use Dashifen\SimpleSymposia\Agents\PostTypeAgent;
 
 class SimpleSymposia extends AbstractPluginHandler
 {
+  public const PREFIX = 'simpsymp-';
+  
   /**
    * initialize
    *
@@ -18,8 +20,15 @@ class SimpleSymposia extends AbstractPluginHandler
    */
   public function initialize(): void
   {
-    $this->registerActivationHook('activate');
-    $this->addAction('init', 'registerContentStructures');
+    if (!$this->isInitialized()) {
+      $this->registerActivationHook('activate');
+      
+      // we initialize agents at priority level 5 so that the agents themselves
+      // can use the default of 10 without it being already in progress.
+      
+      $this->addAction('init', 'initializeAgents', 5);
+      $this->addAction('init', 'activate');
+    }
   }
   
   /**
@@ -34,7 +43,7 @@ class SimpleSymposia extends AbstractPluginHandler
   {
     $agents = $this->getAgentCollection();
     $contentStructureRegistrationAgent = $agents[PostTypeAgent::class];
-    $contentStructureRegistrationAgent->registerContentStructures();
+    $contentStructureRegistrationAgent->register();
     flush_rewrite_rules();
   }
 }

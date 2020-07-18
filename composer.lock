@@ -4,8 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be4fb4f00825c6a4d2b84707d5e62a2f",
+    "content-hash": "123ef596738c91803db04abbbdce9ea4",
     "packages": [
+        {
+            "name": "dashifen/acf-agent",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dashifen/acf-agents.git",
+                "reference": "05e0b0e52032cc44cf66fc1397aaf1eeb582d3a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dashifen/acf-agents/zipball/05e0b0e52032cc44cf66fc1397aaf1eeb582d3a2",
+                "reference": "05e0b0e52032cc44cf66fc1397aaf1eeb582d3a2",
+                "shasum": ""
+            },
+            "require": {
+                "dashifen/wp-handler": "^9.6",
+                "ext-json": "*",
+                "php": ">=7.3"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Dashifen\\ACFAgent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Dashifen Kees",
+                    "email": "dashifen@dashifen.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "An Agent for use with one of my Handler packages that manages ACF data.",
+            "time": "2020-07-18T13:21:04+00:00"
+        },
         {
             "name": "dashifen/collection",
             "version": "1.0.0",
@@ -206,7 +245,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.4"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }

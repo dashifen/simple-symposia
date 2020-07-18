@@ -1,26 +1,1 @@
-{
-  "name": "dashifen/simple-symposia",
-  "description": "A WordPress plugin to create sessions and group them into symposia, conferences, or other similar events.",
-  "minimum-stability": "stable",
-  "type": "wordpress-plugin",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "David Dashifen Kees",
-      "email": "dashifen@dashifen.com",
-      "role": "developer"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "\\Dashifen\\SimpleSymposia\\": "src"
-    }
-  },
-  "require": {
-    "dashifen/wp-handler": "^9.7"
-  },
-  "config": {
-    "sort-packages": true,
-    "optimize-autoloader": true
-  }
-}
+{  "name": "dashifen/simple-symposia",  "description": "A WordPress plugin to create sessions and group them into symposia, conferences, or other similar events.",  "minimum-stability": "stable",  "type": "wordpress-plugin",  "license": "MIT",  "authors": [    {      "name": "David Dashifen Kees",      "email": "dashifen@dashifen.com",      "role": "developer"    }  ],  "autoload": {    "psr-4": {      "Dashifen\\SimpleSymposia\\": "src"    }  },  "require": {    "php": ">=7.4",    "dashifen/acf-agent": "^2.1",    "dashifen/wp-handler": "^9.7"  },  "config": {    "sort-packages": true,    "optimize-autoloader": true  }}

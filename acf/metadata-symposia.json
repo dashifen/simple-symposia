@@ -1,0 +1,57 @@
+{
+    "key": "group_5f12f5500f2f1",
+    "title": "Metadata:  Symposia",
+    "fields": [
+        {
+            "key": "field_5f12f58493807",
+            "label": "Starting Date",
+            "name": "simpsymp-symposia-starting-date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "U",
+            "first_day": 0
+        },
+        {
+            "key": "field_5f12f5e093808",
+            "label": "Ending Date",
+            "name": "simpsymp-symposia-ending-date",
+            "type": "date_picker",
+            "instructions": "If you're scheduling a single-day symposium, then leave this field blank.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "U",
+            "first_day": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "simpsymp-symposium"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}
