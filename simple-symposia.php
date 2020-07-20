@@ -12,8 +12,10 @@
  */
 
 use Dashifen\SimpleSymposia\SimpleSymposia;
+use Dashifen\SimpleSymposia\Agents\SessionAgent;
 use Dashifen\WPHandler\Handlers\HandlerException;
 use Dashifen\SimpleSymposia\Agents\PostTypeAgent;
+use Dashifen\SimpleSymposia\Agents\SymposiumAgent;
 use Dashifen\SimpleSymposia\Agents\FieldGroupAgent;
 use Dashifen\WPHandler\Agents\Collection\Factory\AgentCollectionFactory;
 
@@ -42,6 +44,8 @@ require_once $autoloader;
     $agentCollectionFactory = new AgentCollectionFactory();
     $agentCollectionFactory->registerAgent(PostTypeAgent::class);
     $agentCollectionFactory->registerAgent(FieldGroupAgent::class);
+    $agentCollectionFactory->registerAgent(SymposiumAgent::class);
+    $agentCollectionFactory->registerAgent(SessionAgent::class);
     $simpleSymposia->setAgentCollection($agentCollectionFactory);
     $simpleSymposia->initialize();
   } catch (HandlerException $e) {

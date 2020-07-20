@@ -1,0 +1,207 @@
+{
+    "key": "group_5f14c9dd7dca6",
+    "title": "Metadata:  Speakers",
+    "fields": [
+        {
+            "key": "field_5f14d3b4c6da4",
+            "label": "Alphabetical Name",
+            "name": "simpsymp-speaker-alphabetical-name",
+            "type": "text",
+            "instructions": "The entry here will be used to alphabetize speakers.  We'll try to automatically construct it in the form of \"last name, first name\" but you can change it to something else if necessary.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f14d412c6da5",
+            "label": "Email Address",
+            "name": "simpsymp-speaker-email-address",
+            "type": "email",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5f14ce42c6da1",
+            "label": "Pronouns",
+            "name": "simpsymp-speaker-pronouns",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f14d42cc6da6",
+            "label": "Website",
+            "name": "simpsymp-speaker-website",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f14c9f928e9f",
+            "label": "Social Media",
+            "name": "simpsymp-speaker-social-media",
+            "type": "group",
+            "instructions": "For social media links, enter only usernames; we can construct the rest of the URLs from those.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5f14ca0c28ea0",
+                    "label": "Twitter",
+                    "name": "simpsymp-speaker-social-media-twitter",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "@",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f14ca9a28ea1",
+                    "label": "Facebook",
+                    "name": "simpsymp-speaker-social-media-facebook",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f14caaa28ea2",
+                    "label": "Instagram",
+                    "name": "simpsymp-speaker-social-media-instagram",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f14cab228ea3",
+                    "label": "TikTok",
+                    "name": "simpsymp-speaker-social-media-tiktok",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5f14cac228ea4",
+                    "label": "LinkedIn",
+                    "name": "simpsymp-speaker-social-media-linkedin",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "simpsymp-speaker"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}

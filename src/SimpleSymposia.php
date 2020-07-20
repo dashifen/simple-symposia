@@ -3,6 +3,7 @@
 namespace Dashifen\SimpleSymposia;
 
 use Dashifen\WPHandler\Handlers\HandlerException;
+use Dashifen\SimpleSymposia\Agents\SymposiumAgent;
 use Dashifen\WPHandler\Handlers\Plugins\AbstractPluginHandler;
 use Dashifen\SimpleSymposia\Agents\PostTypeAgent;
 
@@ -64,24 +65,8 @@ class SimpleSymposia extends AbstractPluginHandler
    */
   protected function addAssets(): void
   {
-    if ($this->isSymposiumEditor()) {
+    if (SymposiumAgent::isSymposiumEditor()) {
       $this->enqueue('assets/css/symposium-styles.css');
     }
-  }
-  
-  /**
-   * isSymposiumEditor
-   *
-   * Returns true if we're on the edit-tags.php page and we're specifically
-   * editing our symposium taxonomy.  This method is public so that the
-   * PostTypeAgent can access it, too.
-   *
-   * @return bool
-   */
-  public function isSymposiumEditor(): bool
-  {
-    $screen = get_current_screen();
-    $symposium = self::PREFIX . PostTypeAgent::SYMPOSIUM;
-    return $screen->base === 'edit-tags' && $screen->taxonomy === $symposium;
   }
 }

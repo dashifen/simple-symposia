@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "dashifen/acf-agent",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dashifen/acf-agents.git",
-                "reference": "05e0b0e52032cc44cf66fc1397aaf1eeb582d3a2"
+                "reference": "e11cf26343eecb88297c3ca07bd9cc9cd0e3cd67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dashifen/acf-agents/zipball/05e0b0e52032cc44cf66fc1397aaf1eeb582d3a2",
-                "reference": "05e0b0e52032cc44cf66fc1397aaf1eeb582d3a2",
+                "url": "https://api.github.com/repos/dashifen/acf-agents/zipball/e11cf26343eecb88297c3ca07bd9cc9cd0e3cd67",
+                "reference": "e11cf26343eecb88297c3ca07bd9cc9cd0e3cd67",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 }
             ],
             "description": "An Agent for use with one of my Handler packages that manages ACF data.",
-            "time": "2020-07-18T13:21:04+00:00"
+            "time": "2020-07-18T13:22:47+00:00"
         },
         {
             "name": "dashifen/collection",
@@ -199,16 +199,16 @@
         },
         {
             "name": "dashifen/wp-handler",
-            "version": "9.7.0",
+            "version": "9.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dashifen/wp-handler.git",
-                "reference": "b85b0ce23019940d13f6d43edd591f32f7212aa1"
+                "reference": "c2760cdd96e1cd87303636ca9034c7d8760ddcc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/b85b0ce23019940d13f6d43edd591f32f7212aa1",
-                "reference": "b85b0ce23019940d13f6d43edd591f32f7212aa1",
+                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/c2760cdd96e1cd87303636ca9034c7d8760ddcc7",
+                "reference": "c2760cdd96e1cd87303636ca9034c7d8760ddcc7",
                 "shasum": ""
             },
             "require": {
@@ -236,7 +236,7 @@
                 }
             ],
             "description": "An object to define handlers for various WordPress action and filter hooks using protected methods. ",
-            "time": "2020-07-16T18:51:36+00:00"
+            "time": "2020-07-19T22:19:30+00:00"
         }
     ],
     "packages-dev": [],

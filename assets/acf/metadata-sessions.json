@@ -1,0 +1,103 @@
+{
+    "key": "group_5f14d57a913e1",
+    "title": "Metadata:  Sessions",
+    "fields": [
+        {
+            "key": "field_5f14d5cc7fc10",
+            "label": "Speaker",
+            "name": "simpsymp-session-speaker",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "simpsymp-speaker"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": 1,
+            "max": 1,
+            "return_format": "id"
+        },
+        {
+            "key": "field_5f14d6ed7fc13",
+            "label": "Track",
+            "name": "simpsymp-session-track",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5f14d62f7fc11",
+            "label": "Date",
+            "name": "simpsymp-session-date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "U",
+            "first_day": 0
+        },
+        {
+            "key": "field_5f14d6567fc12",
+            "label": "Time",
+            "name": "simpsymp-session-time",
+            "type": "time_picker",
+            "instructions": "Enter all times in Eastern time zone.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "g:i a",
+            "return_format": "U"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "simpsymp-session"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+}

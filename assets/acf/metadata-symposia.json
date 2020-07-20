@@ -54,6 +54,46 @@
             "toolbar": "basic",
             "media_upload": 1,
             "delay": 0
+        },
+        {
+            "key": "field_5f14d9fa5ac2a",
+            "label": "Tracks",
+            "name": "simpsymp-symposia-tracks",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Track",
+            "sub_fields": [
+                {
+                    "key": "field_5f14da245ac2b",
+                    "label": "Track",
+                    "name": "simpsymp-symposia-tracks-track",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
