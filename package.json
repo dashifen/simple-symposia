@@ -1,0 +1,29 @@
+{
+  "license": "MIT",
+  "version": "0.0.0",
+  "name": "simple-symposia",
+  "description": "A WordPress plugin to create sessions and group them into symposia, conferences, or other similar events.",
+  "repository": {
+    "url": "git+https://github.com/dashifen/simple-symposia.git",
+    "type": "git"
+  },
+  "author": "David Dashifen Kees <dashifen@dashifen.com>",
+  "devDependencies": {
+    "axios": "^0.19",
+    "autoprefixer": "^9.7",
+    "css-loader": "^3.4",
+    "cssnano": "^4.0",
+    "gulp": "^4.0",
+    "gulp-plumber": "^1.2",
+    "gulp-postcss": "^8.0",
+    "gulp-rename": "^2.0",
+    "gulp-sass": "^4.0",
+    "gulp-sourcemaps": "^2.0",
+    "normalize.css": "^8.0",
+    "sass-loader": "^9.0",
+    "through2": "^4.0",
+    "vinyl-named": "^1.0",
+    "webpack": "^4.42",
+    "webpack-stream": "^5.0"
+  }
+}

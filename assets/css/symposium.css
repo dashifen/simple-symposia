@@ -10,8 +10,13 @@
     width: 100%;
 }
 
+.column-current,
 .fixed .column-posts {
     width: 100px;
+}
+
+.column-current {
+    text-align: center !important;  /* overrides core WP alignment for th */
 }
 
 .term-description-wrap {

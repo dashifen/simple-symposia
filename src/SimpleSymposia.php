@@ -29,7 +29,6 @@ class SimpleSymposia extends AbstractPluginHandler
       // can use the default of 10 without it being already in progress.
       
       $this->addAction('init', 'initializeAgents', 5);
-      $this->addAction('admin_enqueue_scripts', 'addAssets');
     }
   }
   
@@ -53,20 +52,6 @@ class SimpleSymposia extends AbstractPluginHandler
     
     if (current_action() !== 'init') {
       flush_rewrite_rules();
-    }
-  }
-  
-  /**
-   * addAssets
-   *
-   * Adds CSS and JS assets necessary for this plugin.
-   *
-   * @return void
-   */
-  protected function addAssets(): void
-  {
-    if (SymposiumAgent::isSymposiumEditor()) {
-      $this->enqueue('assets/css/symposium-styles.css');
     }
   }
 }
