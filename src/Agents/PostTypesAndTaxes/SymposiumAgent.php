@@ -1,12 +1,13 @@
 <?php
 
-namespace Dashifen\SimpleSymposia\Agents;
+namespace Dashifen\SimpleSymposia\Agents\PostTypesAndTaxes;
 
 use WP_Term;
 use WP_Meta_Query;
 use WP_Term_Query;
 use Dashifen\SimpleSymposia\SimpleSymposia;
 use Dashifen\WPHandler\Handlers\HandlerException;
+use Dashifen\SimpleSymposia\Agents\PostTypeAgent;
 use Dashifen\WPHandler\Agents\AbstractPluginAgent;
 use Dashifen\WPHandler\Traits\OptionsManagementTrait;
 
@@ -18,6 +19,39 @@ class SymposiumAgent extends AbstractPluginAgent
    * @var SimpleSymposia
    */
   protected $handler;
+  
+  /**
+   * getCurrentSymposiumTracks
+   *
+   * Returns an array of the tracks available for the current symposium.
+   *
+   * @return array
+   * @throws HandlerException
+   */
+  public function getCurrentSymposiumTracks(): array
+  {
+    $currentSymposium = $this->getOption('simpsymp-current-symposium', false);
+    
+    if ($currentSymposium === false) {
+      wp_die('Unable to identify current symposium.');
+    }
+  
+    $symposium = sprintf(
+      '%s%s_%d',
+      SimpleSymposia::PREFIX,
+      PostTypeAgent::SYMPOSIUM,
+      $currentSymposium
+    );
+  
+    // the tracks array we select from the database is a multidimensional array
+    // the inner arrays each have a single index.  that's what we care about
+    // here.  the arrow function simply grabs that single index and returns it
+    // simplifying our array.  that simplified array is what we return to the
+    // calling scope.
+  
+    $tracks = get_field('simpsymp-symposia-tracks', $symposium);
+    return array_map(fn(array $x) => array_shift($x), $tracks);
+  }
   
   /**
    * getOptionNames

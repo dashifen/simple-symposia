@@ -3,13 +3,32 @@
 namespace Dashifen\SimpleSymposia;
 
 use Dashifen\WPHandler\Handlers\HandlerException;
-use Dashifen\SimpleSymposia\Agents\SymposiumAgent;
-use Dashifen\WPHandler\Handlers\Plugins\AbstractPluginHandler;
 use Dashifen\SimpleSymposia\Agents\PostTypeAgent;
+use Dashifen\WPHandler\Handlers\Plugins\AbstractPluginHandler;
+use Dashifen\SimpleSymposia\Agents\Collection\AgentCollection;
+use Dashifen\SimpleSymposia\Agents\PostTypesAndTaxes\SymposiumAgent;
 
 class SimpleSymposia extends AbstractPluginHandler
 {
   public const PREFIX = 'simpsymp-';
+  
+  /**
+   * @var AgentCollection
+   */
+  protected $agentCollection;
+  
+  /**
+   * getSymposiumAgent
+   *
+   * Returns the symposium agent that is a part of this handler's agent
+   * collection.
+   *
+   * @return SymposiumAgent
+   */
+  public function getSymposiumAgent(): SymposiumAgent
+  {
+    return $this->agentCollection->getSymposiumAgent();
+  }
   
   /**
    * initialize
@@ -42,9 +61,7 @@ class SimpleSymposia extends AbstractPluginHandler
    */
   protected function activate(): void
   {
-    $agents = $this->getAgentCollection();
-    $contentStructureRegistrationAgent = $agents[PostTypeAgent::class];
-    $contentStructureRegistrationAgent->register();
+    $this->agentCollection->getPostTypeAgent()->register();
     
     // this method is called both on activation and during the init action.
     // only during activation do we want to flush the rewrite rules, so we can

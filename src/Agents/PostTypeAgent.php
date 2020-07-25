@@ -2,8 +2,6 @@
 
 namespace Dashifen\SimpleSymposia\Agents;
 
-use WP_Term_Query;
-use WP_Meta_Query;
 use Dashifen\SimpleSymposia\SimpleSymposia;
 use Dashifen\WPHandler\Handlers\HandlerException;
 use Dashifen\WPHandler\Agents\AbstractPluginAgent;
