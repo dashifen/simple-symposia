@@ -9,7 +9,7 @@
   },
   "author": "David Dashifen Kees <dashifen@dashifen.com>",
   "devDependencies": {
-    "axios": "^0.19",
+    "axios": "^0.21",
     "autoprefixer": "^9.7",
     "css-loader": "^3.4",
     "cssnano": "^4.0",
